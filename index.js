@@ -1,35 +1,5 @@
 // https://rapidapi.com/traveltables/api/cost-of-living-and-prices
 
-
-
-
-
-// TO DO //
-//
-// +Turn off get requests until needed (Comment out)
-//
-// +Use req_body.json as a guide for making the new index.ejs layout
-//
-// +Make index.ejs show select items from the data as a brief overview
-//      of the cost of living in selected city.
-//
-// +Style the page to make it userfriendly and nice to look at/use
-//
-// +Possible features:
-//      -select 2 cities for comparison, side-by-side
-//      -have an about-me page
-//
-//
-// API DOCS ADDY: https://rapidapi.com/traveltables/api/cost-of-living-and-prices
-
-
-
-
-
-
-
-
-
 // Import the packages I want to use
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -37,7 +7,7 @@ import axios from 'axios';
 
 // Set app to use express, set port to 3000, use bodyParser, set static file path to '/public'
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 10000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
