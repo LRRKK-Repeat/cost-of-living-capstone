@@ -1,0 +1,122 @@
+/* PAGE SETUP */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #EBE4D1;
+}
+
+img {
+    width: 100%;
+}
+
+/* HEADER */
+header {
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #E55604;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+    color: black;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+}
+
+.nav-button {
+    color: black;
+    display: inline-block;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    border: 1px solid #26577C;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: #e9e9e9;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid black;
+    align-items: center;
+    text-align: center;
+    background-color: #E55604;
+    margin-top: auto;
+    color: rgba(0, 0, 0, 0.74);
+}
+
+
+
+/* PAGES */
+main {
+    margin: auto 0;
+}
+
+.page-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: #26577C;
+}
+
+
+/* HOME-SPECIFIC */
+.cost-of-living-results {
+    border: 2px solid black;
+    padding: 1rem 4rem;
+    margin: 1rem;
+}
+
+.subheader {
+    margin-top: 0.2rem;
+}
+
+.cost-of-living-results h3 {
+    margin-bottom: 0;
+}
+
+.cost-of-living-results li {
+    margin: 0.2rem 0;
+}
+
+/* ABOUT-SPECIFIC */
+
+#about-container {
+    margin: 0 20vw;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* MEDIA-Q */
+@media (min-width: 1150px) {
+    #about-container {
+        margin: 0 30vw;
+    }
+}
+
+@media (max-width: 460px) {
+    .cost-of-living-results {
+        padding: 1rem 1rem;
+    }
+    h3 {
+        margin-top: 0;
+    }
+    #about-container {
+        margin: 0 1rem;
+    }
+}

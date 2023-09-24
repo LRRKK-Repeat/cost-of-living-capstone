@@ -1,0 +1,59 @@
+<%- include("partials/header.ejs") %>
+
+<section class="page-title">
+    <h2>Check out the cost of living in your area</h2>
+    <form action="/" method="POST">
+        <label for="city">Choose a city:</label>
+        <select id="city" name="city">
+            <% for (let city of cities) { %>
+                <option value="<%= city %>"><%= city %></option>
+            <% } %>
+        </select>
+        <input type="submit" value="OK">
+    </form>
+</section>
+
+<% if (locals.content) { %>
+    <article class="cost-of-living-results">
+        <div>
+            <h3><%= content.city_name %></h3>
+            <p class="subheader"><em><%= content.country_name %> • Average prices</em></p>
+        </div>
+        <div>
+            <ul>
+                <% if (locals.content.prices[1]) { %>
+                    <li><%= content.prices[1].item_name %>: <strong>£<%= content.prices[1].avg %></strong></li>
+                <% } %>
+                <% if (locals.content.prices[10]) { %>
+                    <li><%= content.prices[10].item_name %>: <strong>£<%= content.prices[10].avg %></strong></li>
+                <% } %>
+                <% if (locals.content.prices[11]) { %>
+                    <li><%= content.prices[11].item_name %>: <strong>£<%= content.prices[11].avg %></strong></li>
+                <% } %>
+                <% if (locals.content.prices[12]) { %>
+                    <li><%= content.prices[12].item_name %>: <strong>£<%= content.prices[12].avg %></strong></li> 
+                <% } %>
+                <% if (locals.content.prices[13]) { %>
+                    <li><%= content.prices[13].item_name %>: <strong>£<%= content.prices[13].avg %></strong></li>
+                <% } %>
+                <% if (locals.content.prices[17]) { %>
+                    <li><%= content.prices[17].item_name %>: <strong>£<%= content.prices[17].avg %></strong></li>
+                <% } %>
+                <% if (locals.content.prices[22]) { %>
+                    <li><%= content.prices[22].item_name %>: <strong>£<%= content.prices[22].avg %></strong></li>
+                <% } %>
+                <% if (locals.content.prices[33]) { %>
+                    <li><%= content.prices[33].item_name %>: <strong>£<%= content.prices[33].avg %></strong></li>
+                <% } %>
+                <% if (locals.content.prices[36]) { %>
+                    <li><%= content.prices[36].item_name %>: <strong>£<%= content.prices[36].avg %></strong></li>
+                <% } %>
+                <% if (locals.content.prices[49]) { %>
+                    <li><%= content.prices[49].item_name %>: <strong>£<%= content.prices[49].avg %></strong></li>
+                <% } %>
+            </ul>
+        </div>    
+    </article>
+<% } %>
+
+<%- include("partials/footer.ejs") %>
